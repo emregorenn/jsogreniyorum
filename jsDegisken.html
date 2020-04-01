@@ -1,10 +1,109 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            width: 25%;
+            background-color: #f1f1f1;
+            position: fixed;
+            height: 100%;
+            overflow: auto;
+        }
+
+        li a {
+            display: block;
+            color: #000;
+            padding: 8px 16px;
+            text-decoration: none;
+        }
+
+        li a.active {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        li a:hover:not(.active) {
+            background-color: #555;
+            color: white;
+        }
+    </style>
 </head>
 <body>
+
+<ul>
+    <li><a href="jsGiris.html">JavaScript Giriş</a></li>
+    <li><a href="jsSyntax.html">JavaScript Yazılım (Syntax) yapısı</a></li>
+    <li><a class="active" href="jsDegisken.html">Değişkenler</a></li>
+    <li><a href="jsOperator.html">Operatörler</a></li>
+    <li><a href="jsAritmetik.html">Aritmetik</a></li>
+    <li><a href="jsVeriTip.html">Veri Tipleri</a></li>
+    <li><a href="jsFonksiyon.html">Fonksiyon Yapısı</a></li>
+    <li><a href="jsOlay.html">Olaylar (Events)</a></li>
+    <li><a href="jsString.html">Stringler, Sayılar, Diziler ve Diziİşlemleri</a></li>
+    <li><a href="jsKosul.html">If koşul yapıları</a></li>
+    <li><a href="jsDongu.html">Döngüler</a></li>
+    <li><a href="jsTipDonusum.html">Tip Dönüşümleri</a></li>
+    <li><a href="jsCalismaYapisi.html">Çalışma yapısı ve genel mimarisi</a></li>
+
+</ul>
+
+<div style="margin-left:25%;padding:1px 16px;height:1000px;">
+    <h2>Değişkenler</h2>
+    <p>Değişkenler veri tutması için kullanılır.</p>
+    <h3>Değişken Tanımlama Kuralları</h3>
+    <p>
+
+    <li>Değişken isimleri büyük-küçük harf duyarlıdır. Yani ad ile AD aynı değişkeni göstermez.</li>
+    <li>Değişken isimlerinde Türkçeye özgü karakterler kullanılmamalıdır.</li>
+    <li>daha fazla kelimeden oluşuyorsa ilk kelime hariç diğer kelimelerin ilk harfi büyük yazılır. (sayi, maasMiktari,
+        kitapSayisi v.b.)
+    </li>
+    <li>Değişken isimleri ?,!,:,%,- gibi özel karakterler içeremez.(_ karakteri hariç)</li>
+    <li>Değişken ismi olarak JavaScript dilindeki özel kelimeler seçilemez.</li>
+    <li> Değişken isimlerinde zorunlu olmamasına karşın küçük harf kullanımı tercih edilir.
+        Eğer değişken ismi iki ya da
+    </li>
+    <li> Değişken isimleri sayı ile başlayamaz.
+    </li>
+
+    </p>
+
+    <h3>Değer Atama</h3>
+    <p>Tanımlanan değişkene değer ataması yapabilmek için eşittir(=) operatoru kullanılır.</p>
+    <pre> var a = 5;</pre>
+
+    <h3>Değer Türleri</h3>
+    <p>Değişkenler sayısal ve metinsel değerler alabilir.Metinsel değerler tek tırnak veya çift tırnak ile yazılır.Eğer
+        sayısal değerler tırnak içerisine alınırsa metinsel ifade olarak kabul edilir.</p>
+    <pre>
+        var pi = 3.14;
+        var ad = "emre";
+        var soyad = 'goren';
+    </pre>
+
+    <h3>Değer Tanımlamak</h3>
+    <p>Değişken tanımlama var anahtar sözcüğü ile tanımlanır.Eşittir(=) operatorü ile değer ataması yapılır
+        tanımladığımız değişkene</p>
+    <pre>
+        var degiskenAdı;
+        degiskenAdı = atanacakDeger;
+    </pre>
+
+    <p>Birden fazla değişken tanımlamasıda yapılabilir.</p>
+    <pre>
+        var ad="emre",soyad="goren",yas=22;
+    </pre>
+
+
+</div>
 
 </body>
 </html>

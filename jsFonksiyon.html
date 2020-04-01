@@ -1,10 +1,91 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            width: 25%;
+            background-color: #f1f1f1;
+            position: fixed;
+            height: 100%;
+            overflow: auto;
+        }
+
+        li a {
+            display: block;
+            color: #000;
+            padding: 8px 16px;
+            text-decoration: none;
+        }
+
+        li a.active {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        li a:hover:not(.active) {
+            background-color: #555;
+            color: white;
+        }
+    </style>
 </head>
 <body>
+
+<ul>
+    <li><a href="jsGiris.html">JavaScript Giriş</a></li>
+    <li><a href="jsSyntax.html">JavaScript Yazılım (Syntax) yapısı</a></li>
+    <li><a href="jsDegisken.html">Değişkenler</a></li>
+    <li><a href="jsOperator.html">Operatörler</a></li>
+    <li><a href="jsAritmetik.html">Aritmetik</a></li>
+    <li><a href="jsVeriTip.html">Veri Tipleri</a></li>
+    <li><a class="active" href="jsFonksiyon.html">Fonksiyon Yapısı</a></li>
+    <li><a href="jsOlay.html">Olaylar (Events)</a></li>
+    <li><a href="jsString.html">Stringler, Sayılar, Diziler ve Diziİşlemleri</a></li>
+    <li><a href="jsKosul.html">If koşul yapıları</a></li>
+    <li><a href="jsDongu.html">Döngüler</a></li>
+    <li><a href="jsTipDonusum.html">Tip Dönüşümleri</a></li>
+    <li><a href="jsCalismaYapisi.html">Çalışma yapısı ve genel mimarisi</a></li>
+
+</ul>
+
+<div style="margin-left:25%;padding:1px 16px;height:1000px;">
+    <h2>Fonksiyonlar</h2>
+    <p>Fonksiyonlar bir işlevi yerine getiren kod bloklarıdır. Eğer bir projede birden fazla sayfada ya da yerde
+        çalışmasını istediğimiz kodlar varsa imdadımıza fonksiyonlar yetişir.</p>
+    <p>Fonksiyonlar hazır ve kullanıcı tanımlı olmak üzere iki temel sınıfa ayrılırlar. Diğer bir sınıflama yöntemi ise
+        parametreli ya da parametresiz olmalarıdır. Şimdi parametresiz fonksiyonlarla yavaş yavaş fonksiyonları
+        öğrenmeye başlayalım.</p>
+    <h3>Parametresiz Fonksiyon</h3>
+    <p>Parametresiz fonksiyonlar adından da anlaşılacağı gibi herhangi bir parametreye gerek duymadan ve fonksiyonda
+        tanımlanan kodların yerine getirilmesi ile çalışan fonksiyonlardır.</p>
+    <pre>
+        function topla(){
+            var sayi1=3;
+            var sayi2=2;
+            alert(sayi1+sayi2);
+        }
+        topla();
+    </pre>
+
+    <h3>Parametreli Fonksiyon</h3>
+    <p>Kod yazarken iki değeri kısa bir şekilde toplamak istiyoruz diyelim. Ve bu kodları başka sayfalarda da
+        kullanacağız. Bunun için aşağıdaki gibi parametreli bir fonksiyon tanımlamamız yeterlidir.</p>
+    <pre>
+        function topla(sayi1,sayi2){
+            alert(sayi1+sayi2);
+        }
+        topla(2,3);
+    </pre>
+
+
+</div>
 
 </body>
 </html>

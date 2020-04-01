@@ -47,8 +47,8 @@
     <li><a href="jsVeriTip.html">Veri Tipleri</a></li>
     <li><a href="jsFonksiyon.html">Fonksiyon Yapısı</a></li>
     <li><a href="jsOlay.html">Olaylar (Events)</a></li>
-    <li><a class="active" href="jsString.html">Stringler, Sayılar, Diziler ve Diziİşlemleri</a></li>
-    <li><a href="jsKosul.html">If koşul yapıları</a></li>
+    <li><a href="jsString.html">Stringler, Sayılar, Diziler ve Diziİşlemleri</a></li>
+    <li><a class="active" href="jsKosul.html">If koşul yapıları</a></li>
     <li><a href="jsDongu.html">Döngüler</a></li>
     <li><a href="jsTipDonusum.html">Tip Dönüşümleri</a></li>
     <li><a href="jsCalismaYapisi.html">Çalışma yapısı ve genel mimarisi</a></li>
@@ -56,21 +56,40 @@
 </ul>
 
 <div style="margin-left:25%;padding:1px 16px;height:1000px;">
-    <h2>Stringler, Sayılar, Diziler ve Diziİşlemleri</h2>
-    <h3>String</h3>
-    <p>String veri tipi içerisinde metinsel ifadeleri saklar. String veriler değişkenlere girilirken (“) tırnak işareti
-        ya da (‘) kesme işareti kullanılır.</p>
+    <h2>If koşul yapıları</h2>
+    <p>Koşul ifadeleri ve akış kontrolleri programlama dillerinde her zaman en önemli yeri tutmaktadır. Yazdığımız
+        uygulamanın hangi koşulda nasıl davranacağını belirterek bir akış kontrolü oluşturabilmek için koşul ifadelerini
+        iyi bilmemiz gerekir. Tüm programlama dillerinde olduğu gibi en temel koşul ifadesi if else bloklarıdır.</p>
+    <h3>if-else</h3>
     <pre>
-        var ad="emre";
-        var soyad='gören';
+        if(koşul){
+            //1. komutlar
+        }
+        else{
+            //2. komutlar
+        }
     </pre>
-    <p>Some text..</p>
-    <p>Some text..</p>
-    <p>Some text..</p>
-    <p>Some text..</p>
-    <p>Some text..</p>
-    <p>Some text..</p>
-    <p>Some text..</p>
+    <p>Koşul sağlanırsa 1. komutlar, sağlanmazsa 2. komutlar çalıştırılır. Eğer if ve/veya else bloğunun içinde tek
+        komut varsa ilgili komutu süslü parantez içine almak gerekmez. else bloğunun bulunması şart değildir.
+    </p>
+
+    <h3>switch</h3>
+    <pre>switch (ifade) {
+    case sabit1:
+        //komutlar
+        break;
+    case sabit2:
+        //komutlar
+        break;
+    default:
+        //komutlar
+        break;
+}</pre>
+    <p>"ifade"nin ürettiği değer hangi case'de varsa o case'in içindeki komutlar çalıştırılır. case'lerde break;
+        komutunun bulunması zorunlu değildir. Bu durumda programın akışı bir sonraki case'e geçecektir. default case'in
+        bulunması zorunlu değildir.</p>
+
+
 </div>
 
 </body>

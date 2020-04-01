@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            margin: 0;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            width: 25%;
+            background-color: #f1f1f1;
+            position: fixed;
+            height: 100%;
+            overflow: auto;
+        }
+
+        li a {
+            display: block;
+            color: #000;
+            padding: 8px 16px;
+            text-decoration: none;
+        }
+
+        li a.active {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        li a:hover:not(.active) {
+            background-color: #555;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<ul>
+    <li><a href="jsGiris.html">JavaScript Giriş</a></li>
+    <li><a href="jsSyntax.html">JavaScript Yazılım (Syntax) yapısı</a></li>
+    <li><a href="jsDegisken.html">Değişkenler</a></li>
+    <li><a href="jsOperator.html">Operatörler</a></li>
+    <li><a href="jsAritmetik.html">Aritmetik</a></li>
+    <li><a href="jsVeriTip.html">Veri Tipleri</a></li>
+    <li><a href="jsFonksiyon.html">Fonksiyon Yapısı</a></li>
+    <li><a href="jsOlay.html">Olaylar (Events)</a></li>
+    <li><a href="jsString.html">Stringler, Sayılar, Diziler ve Diziİşlemleri</a></li>
+    <li><a href="jsKosul.html">If koşul yapıları</a></li>
+    <li><a class="active" href="jsDongu.html">Döngüler</a></li>
+    <li><a href="jsTipDonusum.html">Tip Dönüşümleri</a></li>
+    <li><a href="jsCalismaYapisi.html">Çalışma yapısı ve genel mimarisi</a></li>
+
+</ul>
+
+<div style="margin-left:25%;padding:1px 16px;height:1000px;">
+    <h2>Döngüler</h2>
+    <p>Programlamanın olmazsa olmazlarıdır. Bir komut bloğunu birden çok kez çalıştırmak için kullanılırlar. Örneğin;
+        ekranımıza 1'den 100'e kadar sayı yazdırmak istiyoruz. Bunun için yüz kere document.write(n) ifadesini yazmayız.
+        Burada devreye döngüler girer.</p>
+    <h3>for Döngüsü</h3>
+
+    <p>En çok kullanılan döngüdür. Bir değişken için tanımladığımız koşul içindeki komutlar döngü tamamlanıncaya kadar
+        çalışır.</p>
+    <pre>
+        for (koşul başlangıç değeri; koşul; arttırma/azaltma) {
+            // Çalışacak komutlar
+        }
+    </pre>
+
+    <h3>while Döngüsü</h3>
+
+    <p>for döngüsü ile aynı işlemleri yapar. Birkaç küçük sözdizimi farkı vardır. Değişken döngüden önce tanımlanır.
+        Parantez içerisine sadece koşul yazılır ve arttırma/azaltma işlemleri yazdırma işleminden sonra yapılır</p>
+    <pre>
+        koşul başlangıç değeri;
+        while (koşul) {
+            // Çalışacak komutlar
+            arttırma/azaltma
+        }
+    </pre>
+
+    <pre>
+        var kullaniciSayisi = prompt("1'den 100'e kadar bir sayı giriniz.", "");
+        var i = kullaniciSayisi;
+        while (i < 100) {
+            document.write(i);
+            i++;
+         }
+    </pre>
+
+    <h3>do ... while Döngüsü</h3>
+
+    <p>while döngüsüne çok benzer. Tek farkı koşul doğru olsun ya da olmasın döngü içersindeki komutların en az bir defa
+        çalıştırılmasıdır.</p>
+    <pre>
+       koşul başlangıç değeri;
+        do {
+            // Çalışacak komutlar
+            arttırma/azaltma
+        } while (koşul)
+    </pre>
+
+</div>
+
+</body>
+</html>
