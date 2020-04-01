@@ -56,19 +56,37 @@
 </ul>
 
 <div style="margin-left:25%;padding:1px 16px;height:1000px;">
-    <h2>Fixed Full-height Side Nav</h2>
-    <h3>Try to scroll this area, and see how the sidenav sticks to the page</h3>
-    <p>Notice that this div element has a left margin of 25%. This is because the side navigation is set to 25% width.
-        If you remove the margin, the sidenav will overlay/sit on top of this div.</p>
-    <p>Also notice that we have set overflow:auto to sidenav. This will add a scrollbar when the sidenav is too long
-        (for example if it has over 50 links inside of it).</p>
-    <p>Some text..</p>
-    <p>Some text..</p>
-    <p>Some text..</p>
-    <p>Some text..</p>
-    <p>Some text..</p>
-    <p>Some text..</p>
-    <p>Some text..</p>
+    <h2>JavaScript Genel Yapısı</h2>
+    <p>Bir websitesine girdiğimizde karşılaştığımız görüntü, HTML adı verilen etiketlerden meydana gelen bir yazım
+        topluluğundan oluşmaktadır. Ancak HTML ile, günümüzde oldukça yaygın olarak görülen dinamizmi yüksek (örneğin
+        açılır kapanır menüler, sürükle-bırak öğeleri, fare ile üzerine gidildiğinde yer veya renk değiştiren nesneler
+        gibi) görünümler elde etmek oldukça zordur. İşte “javascript” denilen programlama dili tam olarak bu noktada
+        devreye girer. İlk olarak 1995 yılında, yukarıda bahsedilen ihtiyaçları fark eden Netscape firması tarafından C
+        benzeri bir dil olarak üretilmiştir. Tarayıcı üzerinde çalışır, eskiden çalışabilmesi için tarayıcıların
+        desteklemesi gerekmekteyken modern tarayıcıların hepsi tarafından desteklenmektedir ve web yazılımında bir
+        standart olmuştur. Genellikle yukarıda bahsettiğimiz gibi “ön-yüz” yazılımlarında kullanılmakta olsa da NodeJS
+        gibi frameworkler ile sunucu tarafında da işlevsel hale gelmiştir.</p>
+
+    <h3>Tarihçesi</h3>
+    <p>Javascript’in yaratıcısı Netscape çalışanı Brendan Eich‘tir. Javascript dili 1997 yılında kullanılmaya
+        başlanmıştır. İlk çıktığı zamanlarda Javascript nedir sorusu oldukça merak edilen bir soruydu. Sebebi ise o
+        günkü tarayıcılarınbir çoğunun henüz javascripti yorumlayamıyor olmasıydı. Ancak JavaScript dili o yıldan bugün
+        geliştirilmeye devam etti. Brendan Eich aynı zamanda Mozilla Vakfı‘nı da kurdu ve bu vakıf JavaScript dilini
+        geliştirmeye halen devam etmektedir.</p>
+
+
+    <h3>HTML içinde JavaScript Kullanımı</h3>
+    <p>HTML5 standart tanımlaması ile javascript kodları sadece script etiketleri arasına yazılmaktadır. Eski
+        tanımlamalarda type ve language niteliklerine ihtiyaç duymasına rağmen güncel kullanımda bu gereksinimler
+        kaldırılmıştır.
+    </p>
+    <h3>Harici JavaScript Dosyasını HTML Belgesine Bağlama</h3>
+    <p>Dahili kullanımda olduğu gibi yine script etiketleri kullanılmaktadır. Burada dikkat edilmesi gerek kısım ise
+        script etiketinin src niteliğine harici olarak yüklenmek istenen javascript dosyası yolu yazılmalıdır.
+
+        Not:Harici bir script dosyası çağrıldığında, harici script çalışacağı için script etiketleri arasına yazılacak
+        kodlar çalışmayacaktır.</p>
+
 </div>
 
 </body>
