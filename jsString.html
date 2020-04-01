@@ -26,7 +26,7 @@
         }
 
         li a.active {
-            background-color: #4CAF50;
+            background-color: #af0205;
             color: white;
         }
 
@@ -56,21 +56,96 @@
 </ul>
 
 <div style="margin-left:25%;padding:1px 16px;height:1000px;">
-    <h2>Stringler, Sayılar, Diziler ve Diziİşlemleri</h2>
-    <h3>String</h3>
+    <h1>Stringler, Sayılar, Diziler ve Diziİşlemleri</h1>
+    <h2>String</h2>
     <p>String veri tipi içerisinde metinsel ifadeleri saklar. String veriler değişkenlere girilirken (“) tırnak işareti
         ya da (‘) kesme işareti kullanılır.</p>
     <pre>
         var ad="emre";
         var soyad='gören';
     </pre>
-    <p>Some text..</p>
-    <p>Some text..</p>
-    <p>Some text..</p>
-    <p>Some text..</p>
-    <p>Some text..</p>
-    <p>Some text..</p>
-    <p>Some text..</p>
+    <h3>Length Özelliği – Metnin Uzunluğunu Alma</h3>
+    <p>String değişken ve ifadelerin kaç karakter uzunlukta olduğunu verir.</p>
+    <pre>
+        var ad="emre";
+        var a=ad.length;// a=4Length Özelliği – Metnin Uzunluğunu Alma
+    </pre>
+
+    <h3>indexOf Metodu - Metin İçinde Arama Yapma</h3>
+    <p>Bir string içerisinde başka bir ifadeyi arayarak, o ifade var ise başladığı karakterin numarasını verir. İlk
+        karakterin numarasının 0 olduğu unutulmamalıdır. Eğer aranan ifade bulunamazsa -1 değeri verir.</p>
+    <p>Aranan ifade tek bir karakter ya da uzun bir ifade olabilir. Aranan ifade birden fazla kez geçiyorsa ilk bulunan
+        eşleşme için sonuç döndürülür.</p>
+    <pre>
+        var ad="emre";
+        var a=a.indexOf("m");//a=1</pre>
+
+
+    <h3>Slice Metodu – Metnin Parçasını Alma</h3>
+    <p>Başlangıç ve bitiş index numaraları verilerek bir string içerisinden parça almaya yarar.</p>
+    <p>Aranan ifade tek bir karakter ya da uzun bir ifade olabilir. Aranan ifade birden fazla kez geçiyorsa ilk bulunan
+        eşleşme için sonuç döndürülür.</p>
+    <pre>
+        var isim = “telefon, tablet, bilgisayar”;
+        var a = isim.slice( 9 , 15 );</pre>
+    <p>Aranan ifade tek bir karakter ya da uzun bir ifade olabilir. Aranan ifade birden fazla kez geçiyorsa ilk bulunan
+        eşleşme için sonuç döndürülür.</p>
+
+
+    <h3>Sayılar</h3>
+    <p>JavaScript programlama dilinde tek bir sayı türü vardır. Çok büyük veya çok küçük sayılar bilimsel gösterim ile
+        yazılabilir:</p>
+
+    <pre>
+        var yıl=1997;
+        var pi=3.14; //küsürlü sayı
+        var sayi1 = 585e5;    // 58500000
+        var sayi2 = 585e-5;   // 0.00585
+    </pre>
+    <h1>Diziler</h1>
+    <p>Dizide eleman tanımlamak için kullanılan üç yöntem vardır.</p>
+    <pre>
+        var sayilar = new Array("sıfır", "bir", "iki", "üç");//Birinci yöntem
+
+
+        var sayilar = ["sıfır", "bir", "iki", "üç"];//ikinci yöntem
+
+
+        var sayilar = new Array();
+        sayilar[0] = "sıfır";
+        sayilar[1] = "bir";         //üçüncü yöntem
+        sayilar[2] = "iki";
+        sayilar[3] = "üç";
+
+    </pre>
+
+    <h2>Dizi İşlemleri</h2>
+
+    <p>push( ) metodu: push dilimizde ittirmek anlamına gelmektedir. JavaScript'te dizinin sonuna eleman eklemek için
+        kullanılır</p>
+    <pre>
+        var sayilar = ["sıfır", "bir", "iki", "üç"];
+        sayilar.push("dört", "beş");
+    </pre>
+    <p>unshift( ) metodu: Bu method JavaScript'te dizinin başına eleman eklemek için kullanılır.</p>
+    <pre>
+        var sayilar = ["sıfır", "bir", "iki", "üç"];
+        sayilar.unshift("eksi üç", "eksi iki", "eksi bir");
+    </pre>
+
+    <p>sort( ) metodu: Dizi elemanlarını küçükten büyüğe göre sıralamak için kullanılır.</p>
+    <pre>
+        var sayilar = ["sıfır", "bir", "iki", "üç"];
+        document.write(sayilar.sort());
+    </pre>
+
+    <p>indexof( ) metodu: Diyelim ki bir dizide çok fazla elemanımız var bir elemanı arıyoruz; fakat nerede olduğunu
+        bulamıyoruz. Bunun için indexof( ) fonsiyonunu kullanıyoruz. Bu metod aranan elemanın indeks konumunu verir.</p>
+    <pre>
+        var sayilar = ["sıfır", "bir", "iki", "üç"];
+        document.write(sayilar.indexOf("iki"));
+    </pre>
+
 </div>
 
 </body>
