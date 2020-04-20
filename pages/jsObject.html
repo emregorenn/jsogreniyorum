@@ -44,7 +44,7 @@
     <li><a href="jsDegisken.html">Değişkenler</a></li>
     <li><a href="jsOperator.html">Operatörler</a></li>
     <li><a href="jsAritmetik.html">Aritmetik</a></li>
-    <li><a class="active" href="jsVeriTip.html">Veri Tipleri</a></li>
+    <li><a href="jsVeriTip.html">Veri Tipleri</a></li>
     <li><a href="jsOlay.html">Olaylar (Events)</a></li>
     <li><a href="jsString.html">Stringler, Sayılar, Diziler ve Diziİşlemleri</a></li>
     <li><a href="jsKosul.html">If koşul yapıları</a></li>
@@ -52,7 +52,7 @@
     <li><a href="jsTipDonusum.html">Tip Dönüşümleri</a></li>
     <li><a href="jsCalismaYapisi.html">Çalışma yapısı ve genel mimarisi</a></li>
     <li><a href="jsFonksiyon.html">Fonksiyon</a></li>
-    <li><a href="jsObject.html">Object</a></li>
+    <li><a class="active" href="jsObject.html">Object Model</a></li>
     <li><a href="jsDom.html">DOM</a></li>
     <li><a href="odev2ornek.html">Ödev 2 Örnekler</a></li>
 
@@ -60,43 +60,48 @@
 </ul>
 
 <div style="margin-left:25%;padding:1px 16px;height:1000px;">
-    <h2>Veri Tipleri</h2>
+    <h2>Object</h2>
 
-    <p>JavaScript dilinde birçok değişken türü bulunur. Bu değişken türleri içerisinde birçok veri tipi saklayabilir. Bu
-        veri tiplerinden bazıları; sayısal, metin, mantıksal, dizeler ve objelerdir.</p>
 
-    <h3>String Veri Tipi(Metin)</h3>
-    <p>String veri tipi içerisinde metinsel ifadeleri saklar. String veriler değişkenlere girilirken (“) tırnak işareti
-        ya da (‘) kesme işareti kullanılır.</p>
+    <h3>Javascript Nesne Oluşturulması</h3>
+    <p>Javascript, standart olarak Object adında bir nesne sunar. Oluşturulan nesneler de Object türündedir.</p>
+
     <pre>
-        var ad="emre";
-        var soyad='gören';
+        var car = new Object();//1.yol
+        var car = {} //2.yol
     </pre>
 
 
-    <h3>Number Veri Tipi(Sayısal)</h3>
-    <p>Numbers veri tipi içerisinde sayısal değerleri tutmak için kullanılır. Değerler tanımlanırken (“) çift tırnak
-        veya (‘) tek tırnak işaretine ihtiyaç yoktur.</p>
+    <h3>Nesnelere Property eklenmesi</h3>
+    <p>Oluşturduğumuz nesnelere property eklenmesi işlemini aşağıdaki şeklide gerçekleştirebiliriz.</p>
     <pre>
-        var a=1;
-        var pi=3.14;
+        var car = {};
+        car.type = "Fiat";
+        car.model = "500";
+        car.color = "white";
     </pre>
 
 
-    <h3>Boolean Veri Tipi(Mantıksal)</h3>
-    <p>Bazı ifadeler sadece iki alternatiflidir. İfade ya doğrudur(true) ya da yanlıştır(false). Bu tip değişkenlere
-        boolean ifadeler ismi verilir. Mantıksal veriler koşul gerektiren ifadeler için kullanılır.</p>
+    <h3>Nesne Üyelerinin Oluşturma Sırasında Eklenmesi</h3>
+    <p>Nesneleri oluşturduktan sonra üyelerin belirlenmesi mümkün olduğu gibi, nesne oluşturulurken üyelerinin
+        belirlenmesi de mümkündür. Kodun temiz olması açısından kullanılabilecek bir gösterim olarak
+        değerlendirilebilir.</p>
     <pre>
-        var a=true;
-        var b=false;
+        var car = {type:"Fiat", model:"500", color:"white"};
     </pre>
 
 
-    <h3>Array Verisi(Dizi)</h3>
-    <p>Dizi bir veri tipinde birden fazla değer içerir. Dizi oluşturulurken köşeli parantez kullanılır ve değerler (,)
-        ile ayrılır.</p>
+    <h3>Constructor(kurucu metod) Kullanılması</h3>
+    <p>Bu nesneye bir constructor eklemek istediğimizde ne yapmamız gereken şudur:</p>
     <pre>
-        var sehir=["a","b"];
+        var car = function (type, model, color){};
+    </pre>
+    <p>Bu fonksiyon “{}” parantezlerden hemen önce belirlenmiştir. Javascript ortamında construstor fonksiyonlar
+        property’leri this isimli nesneye atarlar. Javascript ortamındaki constructor fonksiyonlar C# veya Java’daki
+        sınıflara benzerler. Constructor kullanarak yeni bir nesne oluşturup o nesneye</p>
+    <p>Oluşturduğumuz bu nesneyi şu şeklide kullanabiliriz.</p>
+    <pre>
+        var myCar = new car("Fiat", "500", "white");
     </pre>
 
 </div>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            margin: 0;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            width: 25%;
+            background-color: #f1f1f1;
+            position: fixed;
+            height: 100%;
+            overflow: auto;
+        }
+
+        li a {
+            display: block;
+            color: #000;
+            padding: 8px 16px;
+            text-decoration: none;
+        }
+
+        li a.active {
+            background-color: #af0205;
+            color: white;
+        }
+
+        li a:hover:not(.active) {
+            background-color: #555;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<ul>
+    <li><a href="jsGiris.html">JavaScript Giriş</a></li>
+    <li><a href="jsSyntax.html">JavaScript Yazılım (Syntax) yapısı</a></li>
+    <li><a href="jsDegisken.html">Değişkenler</a></li>
+    <li><a href="jsOperator.html">Operatörler</a></li>
+    <li><a href="jsAritmetik.html">Aritmetik</a></li>
+    <li><a href="jsVeriTip.html">Veri Tipleri</a></li>
+    <li><a href="jsOlay.html">Olaylar (Events)</a></li>
+    <li><a href="jsString.html">Stringler, Sayılar, Diziler ve Diziİşlemleri</a></li>
+    <li><a href="jsKosul.html">If koşul yapıları</a></li>
+    <li><a href="jsDongu.html">Döngüler</a></li>
+    <li><a href="jsTipDonusum.html">Tip Dönüşümleri</a></li>
+    <li><a href="jsCalismaYapisi.html">Çalışma yapısı ve genel mimarisi</a></li>
+    <li><a href="jsFonksiyon.html">Fonksiyon</a></li>
+    <li><a href="jsObject.html">Object Model</a></li>
+    <li><a class="active" href="jsDom.html">DOM</a></li>
+    <li><a href="odev2ornek.html">Ödev 2 Örnekler</a></li>
+
+
+</ul>
+
+<div style="margin-left:25%;padding:1px 16px;height:1000px;">
+    <h2>DOM(Document Object Model)</h2>
+
+    <p> DOM standart bir nesne ve programlama ara yüzüdür.</p>
+    <p><strong>Nesne olarak HTML etiketi şunlara sahiptir.</strong></p>
+    <p><strong>HTML</strong> etiketleri birer <strong>nesnedir</strong></p>
+    <p><strong>HTML</strong> etiketlerinin <strong>özellikleri</strong></p>
+    <p><strong>HTML</strong> etiketlerine erişim <strong>metodları</strong></p>
+    <p>Tüm <strong>HTML</strong> etiketlerinin <strong>olayları</strong></p>
+    <h3>DOM Programlama Arayüzü</h3>
+
+    <p>JavaScript ile Tüm HTML DOM ağacına ulaşabilirsiniz.</p>
+    <p>DOM içinde tüm HTML etiketleri birer nesne (<strong>object</strong>) olarak oluşturulmuştur.</p>
+    <p>Programlama arayüzü her etiket için metot(<strong>method</strong>) ve özellikler(<strong>property</strong>)
+        sunar.
+    </p>
+    <p>Özellik( <strong>Property</strong>) etiket değeri üzerinde okuma ve değiştirme yapma imkanı sunar.(İçeriği
+        değiştirme gibi)
+    </p>
+    <p>Methot (<strong>Method</strong>) etiket üzerinde eylemler gerçekleştirme imkanı sunar.(Yeni etiketler ekleme
+        gibi)
+    </p>
+
+    <h3>getElementById Metodu</h3>
+    <p>Bir HTML etiketine erişmek için kullanılan en sık yöntemlerden biridir. Etiketin id niteliğini kullanır.</p>
+    <h3>innerHTML Özelliği</h3>
+    <p>Bir HTML etiketinin içeriğini öğrenmenin en kolay yoludur. innerHTML ile etiketin içeriğini almak yada
+        değiştirmek mümkündür.</p>
+    <p>Javascript, standart olarak Object adında bir nesne sunar. Oluşturulan nesneler de Object türündedir.</p>
+
+
+    <p>document.<strong>getElementById</strong>(id): <strong>id</strong> niteliği ile eşleşen <strong>ilk</strong>
+        kaydı getirir.
+    </p>
+    <p>document.<strong>getElementsByName</strong>(name): <strong>name</strong> niteliği ile eşleşen
+        <strong>tüm&nbsp;</strong>kayıtları
+        dizi olarak &nbsp;getirir.
+    </p>
+    <p>document.<strong>getElementsByTagName</strong>(etiketadı):<strong>etiket adı</strong> ile eşleşen<strong>
+        tüm</strong>&nbsp;kayıtları dizi olarak getirir.
+    </p>
+    <p>document.<strong>getElementsByClassName</strong>(classAdı):<strong>class</strong> niteliği&nbsp;ile
+        eşleşen<strong> tüm</strong>&nbsp;kayıtları dizi olarak getirir.
+    </p>
+    <p>document.<strong>querySelector</strong>(seçici): <strong>seçici</strong> ile eşleşen <strong>ilk</strong>
+        kaydı getirir.
+    </p>
+    <p>document.<strong>querySelectorAll</strong>(seçici): <strong>seçici</strong> ile eşleşen<strong> tüm</strong>
+        kayıtları dizi olarak getir.
+    </p>
+    <pre>
+      p id="demo"
+      document.getElementById("demo").innerHTML = "Hello World!";
+  </pre>
+
+
+</div>
+
+</body>
+</html>

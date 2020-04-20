@@ -1,0 +1,96 @@
+<html>
+<head>
+    <meta charset="utf-8">
+
+    <style>
+        .kutu {
+            width: 200px;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+            font-size: 20px;
+            font-family: sans-serif;
+            font-weight: bold;
+            background: red;
+            color: white;
+            margin: 5px;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+<br>
+<button id="btn1">Div Oluştur</button>
+<button id="btn2">Paragraf Oluştur</button>
+<button id="btn3">H1 Başlık Oluştur</button>
+<button id="btn6">H2 Başlık Oluştur</button>
+<button id="btn7">H3 Başlık Oluştur</button>
+<button id="btn8">H4 Başlık Oluştur</button>
+<button id="btn4">Pre Oluştur</button>
+<button id="btn5">Code Oluştur</button>
+<div id="panel">
+</div>
+
+<script>
+
+    var btn1 = document.querySelector("#btn1");
+    var btn2 = document.querySelector("#btn2");
+    var btn3 = document.querySelector("#btn3");
+    var btn4 = document.querySelector("#btn4");
+    var btn5 = document.querySelector("#btn5");
+    var btn6 = document.querySelector("#btn6");
+    var btn7 = document.querySelector("#btn7");
+    var btn8 = document.querySelector("#btn8");
+    var panel = document.querySelector("#panel");
+
+    btn1.onclick = function () {
+
+        var div = document.createElement("div");
+        div.textContent = "Merhaba Dünya";
+        div.classList = "kutu";
+        panel.appendChild(div);
+    };
+    btn2.onclick = function () {
+        var etiket = document.createElement("p");
+        etiket.textContent = "Merhaba Dünya";
+        panel.appendChild(etiket);
+    };
+    btn3.onclick = function () {
+        var etiket = document.createElement("h1");
+        etiket.textContent = "Merhaba Dünya";
+        panel.appendChild(etiket);
+    };
+    btn4.onclick = function () {
+        var etiket = document.createElement("code");
+        etiket.innerText = "Merhaba Dünya";
+        panel.appendChild(etiket);
+    };
+    btn5.onclick = function () {
+        var etiket = document.createElement("pre");
+        etiket.innerText = "Merhaba Dünya";
+        panel.appendChild(etiket);
+    };
+    btn6.onclick = function () {
+        var etiket = document.createElement("H2");
+        etiket.innerText = "Merhaba Dünya";
+        panel.appendChild(etiket);
+    };
+    btn7.onclick = function () {
+        var etiket = document.createElement("H3");
+        etiket.innerText = "Merhaba Dünya";
+        panel.appendChild(etiket);
+    };
+    btn8.onclick = function () {
+        var etiket = document.createElement("H8");
+        etiket.innerText = "Merhaba Dünya";
+        panel.appendChild(etiket);
+    };
+    btn5.onclick = function () {
+        var etiket = document.createElement("pre");
+        etiket.innerText = "Merhaba Dünya";
+        panel.appendChild(etiket);
+    }
+
+</script>
+</body>
+</html>

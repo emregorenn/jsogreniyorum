@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        input[type=text], select {
+            width: 50%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            alignment: center;
+        }
+
+        button {
+            width: 10%;
+        }
+    </style>
+</head>
+<body>
+<form id="listeForm">
+    <input id="urunad" name="urunad" type="text">
+    <button onclick="urunEkle();" type="button">Al</button>
+    <button onclick="sil();" type="button">Hepsini Sil</button>
+    <button onclick="sonSil();" type="button">Son Ekleneni Sil</button>
+
+
+</form>
+<div class="al" id="al">
+    <ul id="alList"></ul>
+    <li>ekmek</li>
+    <li>süt</li>
+
+</div>
+
+<script>
+    var array = [];
+    var panel = document.getElementById("al");
+    var sayac = 0;
+
+    function urunEkle() {
+        var urunAd = document.getElementById("urunad").value;
+        var item = document.createElement("li");
+        item.innerHTML = urunAd;
+        item.id = sayac;
+        panel.appendChild(item);
+        sayac++;
+        array.push(item);
+    }
+
+    function sil() {
+        panel.innerHTML = "";
+    }
+
+    function sonSil() {
+        panel.parentNode.removeChild(array[sayac]);
+    }
+
+
+</script>
+</body>
+</html>
